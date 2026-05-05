@@ -294,6 +294,9 @@ mod tests {
         Arc::new(RemoteServerAuthContext::new(
             || -> BoxFuture<'static, Option<String>> { Box::pin(async { None }) },
             || "user id/with spaces".to_string(),
+            String::new,
+            String::new,
+            || true,
         ))
     }
 
